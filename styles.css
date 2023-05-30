@@ -1,0 +1,296 @@
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+:root {
+    --textColor: #ddd;
+    --backgroundColor: linear-gradient(135deg, hsl(218, 39%, 5%)50%, hsl(222, 41%, 15%)80%, hsl(222, 41%, 25%));
+}
+html {
+    background-color: hsl(218, 39%, 5%);
+    background: var(--backgroundColor);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+html::-webkit-scrollbar {
+    width: 1vw;
+}
+  
+html::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #333; 
+    border-radius: 10px;
+}
+   
+html::-webkit-scrollbar-thumb {
+    background: #112; 
+    border-radius: 10px;
+}
+  
+html::-webkit-scrollbar-thumb:hover {
+    background: #222; 
+}
+
+html::-webkit-scrollbar-corner {
+    display: none;
+}
+header {
+    height: 100vh;
+    color: var(--textColor);
+}
+#hello {
+    padding-top: 10vh;
+    margin-left: 15vw;
+    font-size: 4.8vw;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#name {
+    font-size: 4.2vw;
+    padding-left: 20vw;
+    font-family: cursive;
+    font-weight: bold;
+}
+#nameSpan {
+    color: hsl(250, 70%, 60%);
+}
+#personalInfo {
+    font-size: 2.7vw;
+    padding-left: 20vw;
+    width: 90%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#htmlSpan {
+    color: #f06529;
+}
+#cssSpan {
+    color: #2965f1;
+}
+#jsSpan {
+    color: #f0db4f;
+}
+#reactSpan {
+    color: #88dded;
+}
+nav {
+    position: absolute;
+    top: 8vh;
+    right: 8vw;
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2vw;
+    font-family: 'Nova Square', cursive;
+    font-weight: bold;
+    transition: .3s;
+    z-index: 4;
+}
+nav a{
+    text-decoration: none;
+    color: #ddd;
+    transition: .1s;
+}
+nav a:hover {
+    font-size: 2.2vw;
+}
+#headerLink {
+    display: none;
+}
+.fixedNav {
+    position: fixed;
+    top: 1vh;
+    right: 2.5vw;
+    width: 95%;
+    background: hsla(210, 60%, 10%, .9);
+    box-shadow: 0 0 2vh 0 hsla(210, 60%, 15%, .9);
+    font-size: 2.8vw;
+    border-radius: 2vw;
+    padding: .4vw;
+}
+.fixedNav a:hover {
+    font-size: 3vw;
+}
+.fixedNav #headerLink {
+    display: inline;
+}
+.container {
+    height: 80vh;
+    border: 1px solid transparent;
+    position: relative;
+}
+.lanDesc {
+    position: relative;
+    margin: 20vh auto 0;
+    font-size: 4vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 50%;
+    border: .7vh solid var(--textColor);
+    border-radius: 3vh;
+    color: var(--textColor);
+    padding: 1vw;
+    transition: ease-in-out .5s;
+}
+.htmlDesc, .jsDesc {
+    transform: translateX(-160%);
+}
+.cssDesc {
+    transform: translateX(160%);
+}
+.visibleDesc {
+    transform: translateX(0);
+}
+#contacts {
+    height: 100vh;
+    /*border: 1px solid black;*/
+    border: 1px solid transparent;
+    position: relative;
+    color: var(--textColor);
+    font-size: 2.9vw;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#contact-me {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 4.5vw;
+    padding-top: 15vh;
+    margin-left: 10vw;
+    padding-bottom: 0;
+}
+#linked-in, #git-hub {
+    margin-left: 15vw;
+}
+#linkedInLink, #gitHubLink {
+    text-decoration: none;
+    transition: .2s;
+}
+#linkedInLink:hover, #gitHubLink:hover {
+    font-size: 3.3vw;
+}
+#linkedInLink {
+    color: #0069ac;
+}
+#gitHubLink {
+    color: #999;
+}
+
+@media (max-aspect-ratio: 4 / 3) and (min-aspect-ratio: 4 / 5) {
+    html::-webkit-scrollbar {
+        width: 1.5vw;
+    }
+    #hello {
+        padding-top: 10vh;
+        margin-left: 10vw;
+        font-size: 6.5vw;
+    }
+    #name {
+        font-size: 5.7vw;
+        padding-left: 17vw;
+    }
+    #personalInfo {
+        font-size: 3.9vw;
+        padding-left: 17vw;
+    }
+    nav {
+        width: 45%;
+        font-size: 2.3vw;
+    }
+    nav a:hover {
+        font-size: 2.6vw;
+    }
+    .fixedNav {
+        top: 1vh;
+        font-size: 3vw;
+    }
+    .fixedNav a:hover {
+        font-size: 3.3vw;
+    }
+    .container {
+        height: 80vh;
+        border: 1px solid transparent;
+    }
+    .lanDesc {
+        margin: 20vh auto 0;
+        font-size: 5.3vw;
+        width: 60%;
+        border: .7vh solid var(--textColor);
+        border-radius: 3vh;
+        padding: 2vw;
+    }
+    #contacts {
+        font-size: 3.8vw;
+    }
+    #contact-me {
+        font-size: 5.5vw;
+        padding-top: 18vh;
+        margin-left: 7vw;
+        padding-bottom: 0;
+    }
+    #linked-in, #git-hub {
+        margin-left: 13vw;
+    }
+    #linkedInLink:hover, #gitHubLink:hover {
+        font-size: 4.1vw;
+    }
+}
+
+
+@media (max-aspect-ratio: 4 / 5) {
+    html::-webkit-scrollbar {
+        width: 2vw;
+    }
+    #hello {
+        padding-top: 13vh;
+        margin-left: 9vw;
+        font-size: 7.3vw;
+    }
+    #name {
+        font-size: 6.4vw;
+        padding-top: 2vh;
+        padding-left: 15vw;
+    }
+    #personalInfo {
+        font-size: 4.9vw;
+        padding-top: 3vh;
+        padding-left: 15vw;
+    }
+    nav {
+        width: 55%;
+        font-size: 2.6vw;
+    }
+    nav a:hover {
+        font-size: 2.9vw;
+    }
+    .fixedNav {
+        top: 1vh;
+        font-size: 3.2vw;
+    }
+    .fixedNav a:hover {
+        font-size: 3.5vw;
+    }
+    .container {
+        height: 80vh;
+        border: 1px solid transparent;
+    }
+    .lanDesc {
+        margin: 20vh auto 0;
+        font-size: 6.1vw;
+        width: 70%;
+        border: .5vh solid var(--textColor);
+        border-radius: 3vh;
+        padding: 2vw;
+    }
+    #contacts {
+        font-size: 5vw;
+    }
+    #contact-me {
+        font-size: 6.5vw;
+        padding-top: 18vh;
+        margin-left: 5vw;
+        padding-bottom: 5vh;
+    }
+    #linked-in, #git-hub {
+        margin-left: 10vw;
+    }
+    #linkedInLink:hover, #gitHubLink:hover {
+        font-size: 5.5vw;
+    }
+}
